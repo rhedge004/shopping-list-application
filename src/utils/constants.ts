@@ -1,4 +1,7 @@
 import { CategoryData, CategoryMap } from "@/types/shopping-list.d";
+import config from "../../next.config";
+
+export const basePath = config.basePath;
 
 export const CATEGORY_DATA: CategoryData[] = [
   {
