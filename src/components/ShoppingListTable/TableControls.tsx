@@ -2,7 +2,7 @@
 
 import React, { useState, useMemo } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFileArrowDown } from '@fortawesome/free-solid-svg-icons';
+import { faFileArrowDown } from "@fortawesome/free-solid-svg-icons";
 import { Row, Col, Input, Select, Button, Typography, Space } from "antd";
 import { SearchOutlined } from "@ant-design/icons";
 import { useShoppingList } from "@/context/ShoppingListContext";
@@ -64,23 +64,25 @@ export const TableControls: React.FC = () => {
       align="middle"
       justify="space-between"
       style={{
-        marginBottom: 16,
-        padding: 10,
+        padding: '0 20px',
         background: isDarkMode ? black : white,
         height: 100,
-        borderTop: isDarkMode ? '1px solid #1A1D24' :'1px solid #f0f0f0'
+        borderTop: isDarkMode ? "1px solid #1A1D24" : "1px solid #f0f0f0",
       }}
     >
       <Col>
-        <Text style={{ fontSize: "18px", fontWeight: "bold" }}>
+        <Text style={{ fontSize: "28px", fontWeight: "bold" }}>
           {list.length} Items
         </Text>
       </Col>
 
       <Col>
+        <Space size="middle" style={{ paddingRight: 15 }}>
+          <Text>Filter By</Text>
+        </Space>
         <Space size="middle">
           <Select
-            placeholder="Filter By Category"
+            placeholder="Select Category"
             allowClear
             style={{ width: 180 }}
             options={CATEGORY_OPTIONS}
@@ -89,7 +91,7 @@ export const TableControls: React.FC = () => {
           />
 
           <Select
-            placeholder="Filter By Sub Category"
+            placeholder="Select Sub Category"
             allowClear
             style={{ width: 180 }}
             options={subcategoryOptions}

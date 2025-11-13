@@ -19,7 +19,7 @@ export const DarkModeToggle = () => {
         checked={isDarkMode} 
         onChange={toggleTheme} 
         loading={false}
-        style={{ background: '#1890ff' }}
+        style={{ background: isDarkMode ? '#1890ff' : '#515051' }}
       />
     </div>
   );
